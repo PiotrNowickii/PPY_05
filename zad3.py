@@ -1,11 +1,10 @@
 def caesar_cipher(text, key, extra_alphabet=None):
     if extra_alphabet is None:
-        extra_alphabet = []
-    if extra_alphabet:
-        alphabet = extra_alphabet
+        alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
+                    'u', 'v', 'w', 'x', 'y', 'z']
     else:
-        alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
-                    'v', 'w', 'x', 'y', 'z']
+        alphabet = extra_alphabet
+
     tmp = list(text)
     counter = 0
     extra_num = 0
@@ -26,4 +25,4 @@ def caesar_cipher(text, key, extra_alphabet=None):
     print(text)
 
 
-caesar_cipher("The Project Gutenberg eBook of Alice’s Adventures in Wonderland, by Lewis Carroll", 3, ["a", "B"])
+caesar_cipher("The Project Gutenberg eBook of Alice’s Adventures in Wonderland, by Lewis Carroll", 5)
